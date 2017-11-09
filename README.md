@@ -8,7 +8,7 @@ The use case is a situation like this:<br />
 I have more backup folder named by the day of bakcup job (like mm.dd.yyyy)<br />
 I want to delete folder older than x days.<br />
 So this is the purpose of this software, delete all the backup folder older than x days.<br />
-<br />
+
 # Usage
 <br />
 The usage is like a terminal command and the sintax is:<br />
