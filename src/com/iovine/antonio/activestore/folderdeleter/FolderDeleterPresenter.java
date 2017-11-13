@@ -59,6 +59,7 @@ public class FolderDeleterPresenter {
         Files.walkFileTree(path, new SimpleFileVisitor<Path>(){
             @Override public FileVisitResult visitFile(final Path file, final BasicFileAttributes attrs)
                     throws IOException {
+                System.out.println("File to delete" + "\n" + file.toString());
                 Files.delete(file);
                 return CONTINUE;
             }
@@ -75,6 +76,7 @@ public class FolderDeleterPresenter {
             @Override public FileVisitResult postVisitDirectory(final Path dir, final IOException e)
                     throws IOException {
                 if(e!=null)return handleException(e);
+                System.out.println("Folder to delete" + "\n" + dir.toString());
                 Files.delete(dir);
                 return CONTINUE;
             }
